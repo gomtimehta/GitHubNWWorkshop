@@ -38,20 +38,4 @@ jobs:
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
-  loadtest:
-    name: Load Test
-    needs: publish
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout GitHub Actions 
-        uses: actions/checkout@v3
-        
-      - name: 'Azure Load Testing'
-        uses: azure/load-testing@v1
-        with:
-          loadTestConfigFile: 'LoadTestingSample.yaml'
-          loadTestResource: ${{ env.AZURE_LOAD_TESTING_RESOURCE_NAME }}
-          resourceGroup: 'GitHubNWDemoApp_group'      
-
       
