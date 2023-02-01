@@ -7,9 +7,6 @@ on:
 env:
   AZURE_WEBAPP_NAME: 'ParthJunior2'
   AZURE_WEBAPP_PACKAGE_PATH: './publish'
-  AZURE_LOAD_TESTING_RESOURCE_NAME: 'parthjunior2loadtesting'
-  LOCATION: 'EAST US'
-  APP_INSIGHT_LOCATION: 'EAST US'
 
     
 jobs:
