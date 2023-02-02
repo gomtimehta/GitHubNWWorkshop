@@ -50,7 +50,7 @@ jobs:
           loadTestResource: ${{ env.AZURE_LOAD_TESTING_RESOURCE_NAME }}
           resourceGroup: 'GitHubNWDemoApp_group'    
 
-      - name: Upload load testing results
+      - uses: actions/upload-artifact@v2
         with:
           name: Load test results
           path: ${{github.workspace}}/loadTest 
