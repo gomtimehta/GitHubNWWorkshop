@@ -48,13 +48,6 @@ jobs:
         with:
           loadTestConfigFile: 'LoadTestingSample.yaml'
           loadTestResource: ${{ env.AZURE_LOAD_TESTING_RESOURCE_NAME }}
-          resourceGroup: 'GitHubNWDemoApp_group'
-          env: |
-          [
-            {
-              'name': 'nwtestapp',
-              'value': 'https://nwtestapp.azurewebsites.net'
-            }
-          ]      
+          resourceGroup: 'GitHubNWDemoApp_group'     
 
       
