@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  AZURE_WEBAPP_NAME: 'nwtestapp'
+  AZURE_WEBAPP_NAME: 'nwtestappservice1'
   AZURE_WEBAPP_PACKAGE_PATH: './publish'
   AZURE_LOAD_TESTING_RESOURCE_NAME: 'nwloadtestingdemoservice'
 
