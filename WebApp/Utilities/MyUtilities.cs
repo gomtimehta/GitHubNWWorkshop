@@ -4,20 +4,22 @@ namespace WebApp.Utilities
 {
     public class MyUtilities
     {
-
-        public static int CalculateDaysBetweenDates(DateTime startDate, DateTime endDate)
+        //FindAllImagesInGivenDirectory
+        public static void FindAllImagesInGivenDirectory(string directory)
         {
-            return (endDate - startDate).Days;
+            var files = Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories)
+                .Where(s => s.EndsWith(".jpg") || s.EndsWith(".png"));
         }
 
-        public static void FindAllImages()
+        //CalculateAverageOfNumbers
+        public static double CalculateAverageOfNumbers(List<int> numbers)
         {
-
-            var doc = XDocument.Load("index.xhml");
-
-            // find all images
-            var images = doc.Descendants("img");
+            double average = numbers.Average();
+            return average;
         }
+        
+
+
 
     }
 }
