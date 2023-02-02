@@ -3,3 +3,6 @@ testName: SampleTest
 testPlan: LoadTestSample.jmx
 description: 'first load test'
 engineInstances: 1
+failureCriteria:
+  - avg(response_time_ms) > 20
+  - percentage(error) > 1

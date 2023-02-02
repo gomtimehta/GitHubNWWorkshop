@@ -48,6 +48,11 @@ jobs:
         with:
           loadTestConfigFile: 'LoadTestingSample.yaml'
           loadTestResource: ${{ env.AZURE_LOAD_TESTING_RESOURCE_NAME }}
-          resourceGroup: 'GitHubNWDemoApp_group'     
+          resourceGroup: 'GitHubNWDemoApp_group'    
+
+      - name: Upload load testing results
+        with:
+          name: Load test results
+          path: ${{github.workspace}}/loadTest 
 
       
